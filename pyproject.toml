@@ -1,0 +1,21 @@
+
+[tool.poetry]
+name = "tikkuntohu"
+version = "0.1.0"
+description = "Retrieve embeddings for each token in GPT-4's vocabulary."
+authors = ["lumpenspace <lumpenspace@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+tiktoken = "^0.5.2"
+openai = "^1.8.0"
+numpy = "^1.26.3"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+poetry-plugin-export = "^1.6.0"
+pytest = "^6.2.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
