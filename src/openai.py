@@ -1,4 +1,4 @@
-from openai import OpenAI, OpenAIError
+from src.openai import OpenAI, OpenAIError
 from dotenv import load_dotenv
 from os import environ as os_env
 load_dotenv()

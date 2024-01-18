@@ -1,4 +1,4 @@
-import openai
+import src.openai as openai
 import tiktoken
 
 def get_embeddings(token_batch, model):
