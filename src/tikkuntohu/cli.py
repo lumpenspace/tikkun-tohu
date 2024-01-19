@@ -1,8 +1,8 @@
 import click
 import os
 import sys
-from src.tikkuntohu_types import TEmbeddingModel, TTokenEncoding
-from src.get_embeddings import fetch_embeddings
+from tikkuntohu.tikkuntohu_types import TEmbeddingModel, TTokenEncoding
+from tikkuntohu.get_embeddings import get_embeddings
 
 def set_env_variables(api_key):
     os.environ["OPENAI_API_KEY"] = api_key
@@ -38,7 +38,7 @@ def cli(ctx, api_key, model, output_file, batch_size, start, encoding, verbose):
 @click.pass_context
 def fetch(ctx):
     """Fetch and save embeddings."""
-    fetch_embeddings(
+    get_embeddings(
       model=ctx.obj['MODEL'],
       output_file=ctx.obj['OUTPUT_FILE'],
       request_limit=ctx.obj['BATCH_SIZE'],

@@ -13,20 +13,22 @@ Retrieve embeddings for each token in GPT-4's vocabulary using OpenAI's API.
 Use the provided CLI to retrieve embeddings:
 
 ```bash
-poetry run python -m tikkun.cli --help
+poetry run tiktoh --help
 
-Usage: cli.py [OPTIONS] COMMAND [ARGS]...
+  Usage: tiktoh [OPTIONS] COMMAND [ARGS]...
 
-  Retrieve embeddings for each token in GPT-4's vocabulary using OpenAI's
-  API.
+    Retrieve embeddings for each token in GPT-4's vocabulary.
 
-Options:
-  --help  Show this message and exit.
-  --api-key TEXT  OpenAI API key (alternatively, set OPENAI_API_KEY environment variable or add it to a .env file)
-  --model -m TEXT  Model to use (see: TEmbeddingModel)
-  --output-dir -o TEXT  Directory to save embeddings to.
-  --batch-size -b INTEGER  Batch size to use when retrieving embeddings.
-  --start -s INTEGER  Index to start at.
-  --encoding -e TEXT  Tiktoken encoding to use.
-  --verbose -v  Enable verbose logging.
+  Options:
+    --api-key TEXT                 OpenAI API key.
+    -m, --model TEMBEDDINGMODEL    Model to use.
+    -o, --output-dir TEXT          Directory to save embeddings to.
+    -b, --batch-size INTEGER       Batch size for embedding requests.
+    -s, --start INTEGER            Start index for token embeddings.
+    -e, --encoding TTOKENENCODING  Encoding for tokenization.
+    -v, --verbose                  Enable verbose output.
+    --help                         Show this message and exit.
+
+  Commands:
+    fetch  Fetch and save embeddings.
 ```

@@ -1,4 +1,4 @@
-import src.openai as openai
+import tikkuntohu.openai as openai
 import tiktoken
 import numpy as np
 import json
